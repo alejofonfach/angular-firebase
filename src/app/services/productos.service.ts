@@ -9,7 +9,6 @@ import { reject } from 'q';
 })
 export class ProductosService {
 
-
   cargando:boolean = true;
   productos:ProductoInterface[]= [];
   productosFiltrados:ProductoInterface[]= [];
@@ -31,8 +30,6 @@ export class ProductosService {
             resolve();
           });
     } );
-
-    
   }
 
   getProducto(id:string){
@@ -54,7 +51,6 @@ export class ProductosService {
       //aplicar filtro
       this.filtrarProductos( busqueda );
     }
-
   }
 
   private filtrarProductos( busqueda:string ){
@@ -64,7 +60,6 @@ export class ProductosService {
 
     //misma logica que las consultas en entity framework
     this.productosFiltrados = this.productos.filter( producto =>
-      producto.categoria.toLowerCase().includes(busqueda) || producto.titulo.toLocaleLowerCase().includes(busqueda)
-      );
+      producto.categoria.toLowerCase().includes(busqueda) || producto.titulo.toLocaleLowerCase().includes(busqueda));
   }
 }
