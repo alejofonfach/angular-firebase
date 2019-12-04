@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* animacion from https://daneden.github.io/animate.css/
+    para animar algo, sólo hay que agregarle las clases animated y fadein*/
+
+.animated {
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*svg animation*/
+svg path,
+svg rect{
+  fill: black;
+}
