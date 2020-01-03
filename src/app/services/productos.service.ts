@@ -46,7 +46,7 @@ export class ProductosService {
         //ejecucion luego de tener los productos cargados
         //aplicar filtro
         this.filtrarProductos( busqueda );
-      } )
+      } );
     }else{
       //aplicar filtro
       this.filtrarProductos( busqueda );
